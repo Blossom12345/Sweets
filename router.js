@@ -11,7 +11,7 @@ module.exports= function(app){
     app.post('/items', Item.createItem)
     app.post('/cart' , requireAuth, Cart.createItem)
     app.post('/addItemToCart', requireAuth, Cart.addItem)
-    app.delete('/removeFromCart', requireAuth, Cart.itemRemove)
+    app.post('/removeFromCart', requireAuth, Cart.itemRemove)
 
 
 
